@@ -1,0 +1,50 @@
+@import "vars";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+}
+
+
+ul {
+  list-style: none;
+}
+
+pre {
+  font-family: $base-font-family;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  padding: $input-padding;
+  font-family: $base-font-family;
+
+  &::placeholder {
+  }
+}
+
+textarea {
+  resize: none;
+}
