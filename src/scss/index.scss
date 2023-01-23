@@ -1,11 +1,14 @@
 // common
-@import './common/fonts';
-@import './common/vars';
-@import './common/mixins';
-@import './common/general';
+@import "./common/fonts";
+@import "./common/vars";
+@import "./common/mixins";
+@import "./common/general";
 
 //blocks
 @import "./blocks/container";
 @import "./blocks/svg";
 
 //sections
+.img_intro {
+	width: 300px;
+}
