@@ -4,11 +4,9 @@
 @import "./common/mixins";
 @import "./common/general";
 
-//blocks
+// blocks
 @import "./blocks/container";
 @import "./blocks/svg";
+@import "./blocks/header";
 
-//sections
-.img_intro {
-	width: 300px;
-}
+// sections

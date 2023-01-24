@@ -1,0 +1,119 @@
+.header {
+  color: #303030;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  line-height: 100%;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  &__top-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    &_location {
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    height: 16px;
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 100%;
+  }
+
+  &__brand-name {
+    color: #E1A661;
+    font-weight: 400;
+    font-size: 32px;
+    font-family: Prata, serif;
+
+    &_2 {
+      margin-left: 1rem;
+      color: #303030
+    }
+  }
+
+  &__brand-descr {
+    margin-top: 10px;
+    color: #919191;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 0.27em;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+    background: #F8F8F8;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__nav-item {
+  }
+
+  &__nav-link {
+    padding: 25px 0;
+    color: #303030;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    line-height: 100%;
+    text-transform: uppercase;
+    transition: 300ms;
+
+    &:hover {
+      color: #303030;
+      opacity: 0.5;
+      transition: 300ms;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 26px;
+    border-left: 1px solid #F0F0F0;
+
+    &._active {
+      border: 2px solid #303030;
+      border-radius: 1rem;
+    }
+
+    input {
+      padding: .5rem;
+      background-color: #F8F8F8;
+      border: none;
+      outline: none;
+
+      &::placeholder {
+        color: #A2A2A2;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: Inter, sans-serif;
+        font-style: normal;
+        line-height: 100%;
+      }
+    }
+
+  }
+}

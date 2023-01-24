@@ -1,9 +1,6 @@
 // FONTS
-$base-font-family: "Inter", "Prata-Regular", sans-serif, "RobotoCondensed-Light";
+$base-font-family: inter, 'Prata', sans-serif, robotocondensed-light;
 $base-font-size: 16px;
-
-// INPUTS
-$input-padding: 16px;
 
 // BREAKPOINTS
 $mobile-bp: 576px;
@@ -15,4 +12,4 @@ $desktop-bp: 1300px;
 $mobile-width: 100%;
 $tablet-width: 740px;
 $notebook-width: 960px;
-$desktop-width: 1280px;
+$desktop-width: 1300px;
