@@ -4,45 +4,9 @@ block title
     title Goldy Store
 
 block header
-    section.container
-        .header__top
-            .header__top-item.header__top-item_location
-                img(src='./svg/sprite.svg#location').header__icon.header__icon-location
-                span Санкт-Петербург
-                img(src='./svg/sprite.svg#arrow-drop').header__icon.header__icon-location
-
-            .header__top-item
-                img(src='./svg/sprite.svg#phone').header__icon.header__icon-phone
-                a(href='tel:88007852535') 8 800 785-25-35
-
-            .header__top-item
-                a(href='/').header__brand
-                    span.header__brand-name
-                        span.header__brand-name_1 Goldy
-                        span.header__brand-name_2 Store
-                    span.header__brand-descr ювелирный магазин
-
-            .header__top-item
-                a(href='#') Вход
-                span |
-                a(href='#') Регистрация
-
-            .header__top-item
-                a(href='#')
-                    img(src='./svg/sprite.svg#favorite').header__icon.header__icon-favorite
-                a(href='#')
-                    img(src='./svg/sprite.svg#chart').header__icon.header__icon-chart
-                a(href='#')
-                    img(src='./svg/sprite.svg#cart').header__icon.header__icon-cart
-        .header__nav
-            ul.header__nav-list
-                each val in ['каталог', 'акции', 'бренды', 'магазины', 'о нас', 'доставка и оплата', 'статьи']
-                    li.header__nav-item
-                        a(href='#').header__nav-link= val
-            form(data-js='header-search-js').header__search
-                img(src="./svg/sprite.svg#search").header__icon
-                input(type='search' placeholder='Поиск по сайту')
+    include components/header
 
 block main
+    include sections/index/intro
 
 block footer
