@@ -1,0 +1,10 @@
+section.pc
+    .container.pc__content
+        h2.pc__title Популярные категории
+        .pc__items
+            - let count = 1
+            each val in ['Кольца', 'Серьги', 'Помолвочные кольца', 'Браслеты', 'Колье и подвески', 'Часы']
+                a(href='#').pc__item
+                    img.pc__img(src=`img/content/pc/${count}.png`)
+                    h3.pc__name= val
+                    - count++
