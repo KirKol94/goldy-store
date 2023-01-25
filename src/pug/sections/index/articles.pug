@@ -1,0 +1,15 @@
+section.articles
+    .articles__content.container
+        .articles__header
+            h2.articles__title Статьи
+            a(href='#').articles__more
+                span.articles__more--text Читать все
+                img(src='svg/sprite.svg#arrow').articles__more--arrow
+        .articles__items
+            - count = 1
+            each el in [ {date: '21 сентября 2021', mdata='2021-09-21', title: 'Обручальные кольца: тренды 2021'}, {date: '25 сентября 2021', mdata='2021-09-25', title: 'Главные ювелирные тренды года'}, {date: '21 сентября 2021', mdata='2021-09-21', title: 'Жемчуг: 7 малоизвестных фактов о культовом украшении'}, {date: '21 сентября 2021', mdata='2021-09-21', title: 'Как отличить золото от подделки: 10 практических советов'}, ]
+                a(href='#').articles__item
+                    img(src=`img/content/articles/${count}.png`).articles__img
+                    time(datatile=`${el.mdata}`).articles__date= el.date
+                    h3.articles__name= el.title
+                    - count++
