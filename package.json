@@ -8,6 +8,7 @@
     "lint": "eslint ./src/**/*.js",
     "lint:fix": "eslint --fix ./src/**/*.js",
     "dev": "gulp",
+    "git": "git add . && git commit -m 'коммит' && git commit --amend",
     "build": "gulp build --build",
     "stylelint": "npx stylelint \"**/*.scss\"",
     "stylelint:fix": "npx stylelint \"**/*.scss\" --fix"
