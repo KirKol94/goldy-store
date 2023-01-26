@@ -4,9 +4,9 @@ section.container
             .header__top-item
                 img(src='./svg/sprite.svg#location').header__icon.header__icon-location
                 span(data-js='header-location-city-text-js') Санкт-Петербург
-                img(src='./svg/sprite.svg#arrow-drop').header__icon.header__icon-location
+                img(src='./svg/sprite.svg#arrow-drop').header__icon.header__icon--location_arrow
             div(data-js='header-location-list-js').header__top_location-list._hidden
-                each city in ['Москва', 'Санкт-Петербург','Иркутск', 'Самара', 'Саратов', 'Волгоград', 'Красноярск']
+                each city in ['Москва', 'Санкт-Петербург','Иркутск', 'Самара', 'Саратов', 'Волгоград', 'Кременчуг-Константиновское']
                     span(data-js='header-location-list-item-js').header__top_location-item= city
 
         a(href='tel:88007852535').header__top-item

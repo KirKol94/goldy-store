@@ -13,7 +13,7 @@
 
   &__top-item {
     display: flex;
-    gap: 1rem;
+    gap: 7px;
     align-items: center;
   }
 
@@ -21,21 +21,21 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    width: 205px;
     cursor: pointer;
 
     &-list {
       position: absolute;
       top: 100%;
       left: 0;
+      z-index: 999;
       display: flex;
       flex-direction: column;
-      width: 184px;
-      max-height: 200px;
+      width: 205px;
+      max-height: 164px;
       overflow-y: scroll;
-      overflow-x: auto;
       background-color: #fff;
-      box-shadow: 0 6px 6px rgb(0 0 0 / 50%);
+      box-shadow: 0 8px 20px rgb(0 0 0 / 10%);
       animation: slide-down 0.3s ease-out;
 
       &._hidden {
@@ -44,7 +44,7 @@
     }
 
     &-item {
-      padding: .5rem;
+      padding: 9px 24px;
 
       &:hover {
         background-color: #ccc;
@@ -59,6 +59,10 @@
 
   &__icon {
     height: 16px;
+
+    &--location_arrow{
+      width: 5px;
+    }
   }
 
   &__brand {
@@ -90,9 +94,9 @@
   }
 
   &__nav {
-    margin-top: 23px;
     display: flex;
     justify-content: space-around;
+    margin-top: 23px;
     background: #F8F8F8;
   }
 
@@ -159,6 +163,7 @@
   from {
     transform: translateY(-10%);
   }
+
   to {
     transform: translateY(0);
   }

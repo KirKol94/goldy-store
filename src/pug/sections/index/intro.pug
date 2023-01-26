@@ -1,22 +1,23 @@
 section.intro
     .container.intro__content
-        .intro__items
-            .intro__item
-                .intro__text
-                    span.intro__sale_description Суперскидка до 60%
-                    h1.intro__sale_on НА БРИЛЛИАНТЫ
-                    button.intro__sale_action Подробнее
-                .intro__img
-                    img(src='img/content/intro/ring.png')
-        .intro__navigation
-            .intro__nav_left.intro__nav_item
+        .swiper.js-intro__slider.intro__slider
+            .intro__items.swiper-wrapper
+                .intro__item.swiper-slide
+                    .intro__text
+                        span.intro__sale_description Суперскидка до 60%
+                        h1.intro__sale_on НА БРИЛЛИАНТЫ
+                        button.intro__sale_action Подробнее
+                    .intro__img
+                        img(src='img/content/intro/ring.png')
+                .intro__item.swiper-slide
+                    .intro__text
+                        span.intro__sale_description Суперскидка до 60%
+                        h1.intro__sale_on НА КОЛЬЕ
+                        button.intro__sale_action Подробнее
+                    .intro__img
+                        img(src='img/content/intro/necklace.png' height='548px')
+            .js-intro__nav_left.intro__nav_left.intro__nav_item
                 img(src='./svg/sprite.svg#arrow-slider-active')
-            .intro__nav_right.intro__nav_item
+            .js-intro__nav_right.intro__nav_right.intro__nav_item
                 img(src='./svg/sprite.svg#arrow-slider-active')
-        .intro__pagination
-            a(href='#').intro__pagination_item
-                img(src='svg/sprite.svg#slider-indicator-active')
-            a(href='#').intro__pagination_item
-                img(src='svg/sprite.svg#slider-indicator')
-            a(href='#').intro__pagination_item
-                img(src='svg/sprite.svg#slider-indicator')
+            .intro__pagination.swiper-pagination
