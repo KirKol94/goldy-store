@@ -12,7 +12,9 @@ section.articles
             - count = 1
             each el in articles
                 a(href='#').articles__item
-                    img(src=`img/content/articles/${count}.png`).articles__img
+                    picture.articles__img
+                        source(srcset=`img/content/articles/${count}@1x.png 1x, img/content/articles/${count}@2x.png 2x`)
+                        img(src=`img/content/articles/${count}@1x.png` srcset=`img/content/articles/${count}@2x.png` alt= el.title)
                     span.articles__date= el.date
                     h3.articles__name= el.title
                 - count++

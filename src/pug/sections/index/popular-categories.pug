@@ -5,6 +5,8 @@ section.pc
             - let count = 1
             each val in ['Кольца', 'Серьги', 'Помолвочные кольца', 'Браслеты', 'Колье и подвески', 'Часы']
                 a(href='#').pc__item
-                    img.pc__img(src=`img/content/pc/${count}.png`)
+                    picture.pc__img
+                        source(srcset=`img/content/pc/${count}@1x.png 1x, img/content/pc/${count}@2x.png 2x`)
+                        img(src=`img/content/pc/${count}@1x.png' img/content/pc/${count}@2x.png`, alt= val)
                     h3.pc__name= val
                     - count++
