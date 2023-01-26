@@ -10,7 +10,7 @@
     "dev": "gulp",
     "commit": "git add . && git commit -m 'коммит' && git commit --amend",
     "status": "git status",
-    "build": "gulp build --build",
+    "build": "gulp build --build && open .",
     "stylelint": "npx stylelint \"**/*.scss\"",
     "stylelint:fix": "npx stylelint \"**/*.scss\" --fix"
   },
