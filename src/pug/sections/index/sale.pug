@@ -1,3 +1,35 @@
+-
+    const saleItems = [
+        {
+            title: 'Стильное кольцо из белого золота c бриллиантами',
+            isSale: true,
+            saleSize: 45,
+            oldPrice: '65 000',
+            currentPrice: '41 000',
+        },
+        {
+            title: 'Стильное кольцо из белого золота c бриллиантами',
+            isSale: false,
+            saleSize: null,
+            oldPrice: null,
+            currentPrice: '56 000',
+        },
+        {
+            title: 'Стильное кольцо из белого золота c бриллиантами',
+            isSale: false,
+            saleSize: null,
+            oldPrice: null,
+            currentPrice: '37 500',
+        },
+        {
+            title: 'Стильное кольцо из белого золота c бриллиантами',
+            isSale: false,
+            saleSize: null,
+            oldPrice: null,
+            currentPrice: '39 200',
+        },
+    ]
+
 section.sale
     .container.sale__content
         .sale__header
@@ -5,9 +37,39 @@ section.sale
             .sale__nav
                 .sale__nav--tabs
                     each val in ['Кольца', 'Серьги', 'Браслеты', 'Часы']
-                        a(href='#' class= val==='Кольца' && '_active').sale__nav--item= val
+                        a(href='#' class= val === 'Кольца' && '_active').sale__nav--item= val
                 .sale__nav--arrows
                     button.sale__nav--arrow
                         img(src='svg/sprite.svg#arrow-slider-not-active')
                     button.sale__nav--arrow
                         img(src='svg/sprite.svg#arrow-slider-active')
+        .sale__items
+            each el, i in saleItems
+                .sale__item
+                    if el.isSale
+                        span.sale__sale Sale
+                    img(src='svg/sprite.svg#like-fill' width='20px' alt='Иконка лайк').sale__favorite
+                    img(src='svg/sprite.svg#eyes' width='20px' alt='Иконка глаз').sale__eyes
+                    .sale__img.swiper.js-sale__slider
+                        .swiper-wrapper
+                            .swiper-slide
+                                picture
+                                    source(srcset=`img/content/sale/${i + 1}@1x.png 1x, img/content/sale/${i + 1}@2x.png 2x`)
+                                    img(src=`img/content/sale/${i + 1}@1x.png` srcset=`img/content/sale/${i + 1}@2x.png` alt=el.title)
+                            .swiper-slide
+                                picture
+                                    source(srcset=`img/content/sale/${i + 1}@1x.png 1x, img/content/sale/${i + 1}@2x.png 2x`)
+                                    img(src=`img/content/sale/${i + 1}@1x.png` srcset=`img/content/sale/${i + 1}@2x.png` alt=el.title)
+                            .swiper-slide
+                                picture
+                                    source(srcset=`img/content/sale/${i + 1}@1x.png 1x, img/content/sale/${i + 1}@2x.png 2x`)
+                                    img(src=`img/content/sale/${i + 1}@1x.png` srcset=`img/content/sale/${i + 1}@2x.png` alt=el.title)
+                        .sale__pagination.swiper-pagination.js-sale__pagination
+                    .sale__price
+                        div
+                            span.sale__current_price= `${el.currentPrice}₽`
+                            if el.isSale
+                                span.sale__old_price= `${el.oldPrice.toString()}₽`
+                        if el.isSale
+                            span.sale__sale_size= `-${el.saleSize}%`
+                    h3.sale__name= el.title
