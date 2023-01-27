@@ -1,0 +1,33 @@
+-
+    sc_data = [
+        {
+            title: 'Скидки\n' +
+                    'на все украшения с бриллиантами',
+            size: 50
+        },
+        {
+            title: 'Скидки\n' +
+                    'на кольца\n' +
+                    'и браслеты',
+            size: 40
+        },
+        {
+            title: 'снижение цен  на обручальные кольца',
+            size: 60
+        },
+    ]
+
+section.sc
+    .sc__content.container
+        .sc__items
+            each el, i in sc_data
+                .sc__item
+                    .sc__text
+                        .sc__title= el.title
+                        button.sc__button
+                            span До
+                            span= `-${el.size}%`
+                    .sc__img
+                        picture
+                            source(srcset=`img/content/sc/${i + 1}@1x.png 1x, img/content/sc/${i + 1}@2x.png 2x`)
+                            img(src=`img/content/sc/${i + 1}@1x.png` srcset=`img/content/sc/${i + 1}@2x.png` alt=el.title)

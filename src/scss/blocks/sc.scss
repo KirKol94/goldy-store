@@ -1,0 +1,78 @@
+.sc {
+  margin-top: 120px;
+
+  &__content {
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    :nth-child(1) {
+      button {
+        background-color: #43807F;
+      }
+    }
+
+    :nth-child(2) {
+      button {
+        background-color: #E24B33;
+      }
+    }
+
+    :nth-child(3) {
+      button {
+        background-color: #E1A561;
+      }
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__text {
+    background-image: url('svg/sprite.svg#intro-crystall');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+  }
+
+  &__title {
+    margin-top: 72px;
+    margin-left: 26px;
+    color: #303030;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: Inter;
+    font-style: normal;
+    line-height: 160%;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    margin-top: 22px;
+    margin-left: 13px;
+    padding: 7px 26px;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 24px;
+    font-family: Inter;
+    line-height: 160%;
+    border: none;
+    outline: none;
+
+    :nth-child(2) {
+      font-size: 36px;
+    }
+  }
+
+  &__img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
