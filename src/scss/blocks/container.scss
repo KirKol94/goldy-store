@@ -4,7 +4,7 @@
 .container {
   max-width: $mobile-width;
   margin: 0 auto;
-  padding: 16px;
+  padding: 0 16px;
 
   @include tablet {
     max-width: $tablet-width;

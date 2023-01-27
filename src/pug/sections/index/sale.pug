@@ -1,0 +1,13 @@
+section.sale
+    .container.sale__content
+        .sale__header
+            h2.sale__title Распродажа
+            .sale__nav
+                .sale__nav--tabs
+                    each val in ['Кольца', 'Серьги', 'Браслеты', 'Часы']
+                        a(href='#' class= val==='Кольца' && '_active').sale__nav--item= val
+                .sale__nav--arrows
+                    button.sale__nav--arrow
+                        img(src='svg/sprite.svg#arrow-slider-not-active')
+                    button.sale__nav--arrow
+                        img(src='svg/sprite.svg#arrow-slider-active')
