@@ -1,13 +1,20 @@
 .sc {
-  margin-top: 120px;
+  margin-top: 60px;
+  @include desktop {
+    margin-top: 120px;
+  }
 
   &__content {
   }
 
   &__items {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    @include desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
 
     :nth-child(1) {
       button {
@@ -42,19 +49,21 @@
 
   &__title {
     margin-top: 72px;
-    margin-left: 26px;
+    margin-left: 9px;
     color: #303030;
     font-weight: 600;
     font-size: 20px;
     font-family: Inter;
-    font-style: normal;
     line-height: 160%;
     text-transform: uppercase;
+    @include desktop {
+      margin-left: 26px;
+    }
   }
 
   &__button {
     margin-top: 22px;
-    margin-left: 13px;
+    margin-left: 9px;
     padding: 7px 26px;
     color: #FFF;
     font-weight: 600;
@@ -63,13 +72,16 @@
     line-height: 160%;
     border: none;
     outline: none;
+    @include desktop {
+      margin-left: 13px;
+    }
 
     :nth-child(2) {
       font-size: 36px;
     }
   }
 
-  &__img{
+  &__img {
     display: flex;
     flex-direction: column;
     align-items: center;

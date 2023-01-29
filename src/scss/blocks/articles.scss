@@ -1,5 +1,8 @@
 .articles {
-  margin-top: 120px;
+  margin-top: 60px;
+  @include desktop {
+    margin-top: 120px;
+  }
 
   &__content {
   }
@@ -8,15 +11,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 8px;
+    @include desktop {
+      padding: 0;
+    }
   }
 
   &__title {
     color: #303030;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 28px;
     font-family: Prata, serif;
     font-style: normal;
     line-height: 100%;
+    @include desktop {
+      font-size: 40px;
+    }
   }
 
   &__more {
@@ -41,8 +51,15 @@
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 40px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 20px;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 40px;
+    }
   }
 
   &__item {
@@ -51,12 +68,15 @@
     padding: 6px;
     row-gap: 11px;
 
-    &:hover{
+    &:hover {
       background-color: #F8F8F8;
     }
   }
 
   &__img {
+    img {
+      width: 100%;
+    }
   }
 
   &__date {

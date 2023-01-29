@@ -1,6 +1,6 @@
 section.container
     .header__top
-        div(data-js='header-location-js').header__top_location
+        .header__top_location(data-js='header-location-js')
             .header__top-item
                 img(src='./svg/sprite.svg#location').header__icon.header__icon-location
                 span(data-js='header-location-city-text-js') Санкт-Петербург
@@ -40,3 +40,10 @@ section.container
         form(data-js='header-search-js').header__search
             img(src="./svg/sprite.svg#search").header__icon
             input(type='search' placeholder='Поиск по сайту')
+    .header__mobile
+        a(href='/')
+            h1.header__mobile--logo
+                span Goldy
+                span Store
+        .header__mobile--burger-icon.js-burger
+            img(src='svg/sprite.svg#burger' width='40px')

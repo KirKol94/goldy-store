@@ -1,5 +1,8 @@
 .product_of_day {
-  margin-top: 120px;
+  margin-top: 60px;
+  @include desktop {
+    margin-top: 120px;
+  }
 
   &__content {
   }
@@ -8,15 +11,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 8px;
+    @include desktop {
+      padding: 0;
+    }
   }
 
   &__title {
     color: #303030;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 28px;
     font-family: Prata;
-    font-style: normal;
     line-height: 100%;
+    @include desktop {
+      font-size: 40px;
+    }
   }
 
   &__arrows {
@@ -33,8 +42,11 @@
 
   &__product {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
     margin-top: 40px;
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__img {
@@ -46,18 +58,33 @@
   &__slider {
     position: relative;
 
+    img {
+      max-width: 100vw;
+    }
+
     & > .swiper-button-prev {
       position: absolute;
-      left: 16px;
+      left: 8px;
+      @include desktop {
+        left: 16px;
+      }
     }
 
     & > .swiper-button-next {
       position: absolute;
-      right: 16px;
+      right: 8px;
+      @include desktop {
+        right: 16px;
+      }
     }
   }
 
   &__info {
+    max-width: 100vw;
+    padding: 0 8px;
+    @include desktop {
+      padding: 0;
+    }
   }
 
   &__rating {
@@ -74,10 +101,13 @@
     margin-top: 24px;
     color: #303030;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 22px;
     font-family: Prata;
     font-style: normal;
     line-height: 100%;
+    @include desktop{
+      font-size: 32px;
+    }
   }
 
   &__article_num {
@@ -91,11 +121,13 @@
   }
 
   &__price_block {
-    display: flex;
-    align-items: center;
     margin-top: 36px;
     padding-bottom: 20px;
     border-bottom: 1px solid #F0F0F0;
+    @include desktop {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__price {
@@ -136,9 +168,13 @@
     display: flex;
     gap: 9px;
     align-items: center;
-    margin-left: 36px;
+    justify-content: center;
     padding: 12px 14px 20px;
     background-color: #F5F5F5;
+    @include desktop {
+      justify-content: start;
+      margin-left: 36px;
+    }
 
     &--sep {
     }
@@ -251,6 +287,7 @@
 
     &--items {
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
       align-items: center;
     }
@@ -281,9 +318,14 @@
   }
 
   &__actions {
+    margin-top: 24px;
     display: flex;
-    gap: 40px;
-    margin-top: 40px;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+      gap: 40px;
+      margin-top: 40px;
+    }
 
     &--buy {
       display: flex;
@@ -291,15 +333,17 @@
       row-gap: 10px;
 
       & > * {
-        width: 400px;
+        max-width: 100%;
         padding: 22px 0;
         font-weight: 500;
         font-size: 14px;
+        @include desktop {
+          width: 400px;
+        }
       }
 
       :nth-child(1) {
         @extend .btn;
-
         color: #fff;
         background: #303030;
       }
@@ -322,9 +366,13 @@
     }
 
     &--more {
+      margin-top: 24px;
       display: flex;
       flex-direction: column;
       row-gap: 23px;
+      @include desktop{
+        margin-top: 0;
+      }
     }
 
     &--more_item {

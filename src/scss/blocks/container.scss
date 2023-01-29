@@ -4,7 +4,6 @@
 .container {
   max-width: $mobile-width;
   margin: 0 auto;
-  padding: 0 16px;
 
   @include tablet {
     max-width: $tablet-width;
@@ -12,6 +11,7 @@
 
   @include notebook {
     max-width: $notebook-width;
+    padding: 0 16px;
   }
 
   @include desktop {

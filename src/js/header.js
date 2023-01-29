@@ -1,4 +1,4 @@
-(() => {
+!(() => {
     const headerLocationBlock = document.querySelector('[data-js=\'header-location-js\']')
     const headerLocationList = headerLocationBlock.querySelector('[data-js=\'header-location-list-js\']')
     const headerLocationListItems = headerLocationList.querySelectorAll('[data-js=\'header-location-list-item-js\']')

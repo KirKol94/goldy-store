@@ -1,3 +1,4 @@
+//= 'menu.js'
 //= 'header.js'
 //= 'intro.js'
 //= 'sale.js'

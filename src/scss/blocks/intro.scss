@@ -11,52 +11,65 @@
 
   &__item {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr);
+    @include notebook {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__text {
+    margin-top: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 126px;
     background-image: url('svg/sprite.svg#intro-crystall');
     background-repeat: no-repeat;
     background-position: center 0;
     background-size: cover;
+    color: #303030;
+    font-weight: 400;
+    font-family: Prata, serif;
+    line-height: 100%;
+    padding: 0 8px;
+
+    @include desktop {
+      margin-top: 0;
+      margin-left: 126px;
+      padding: 0;
+    }
   }
 
   &__sale_description {
-    color: #303030;
-    font-weight: 400;
     font-size: 20px;
-    font-family: Prata, serif;
-    line-height: 100%;
   }
 
   &__sale_on {
     margin-top: 30px;
     margin-bottom: 54px;
-    color: #303030;
-    font-weight: 400;
-    font-size: 50px;
-    font-family: Prata, serif;
-    font-style: normal;
-    line-height: 100%;
+    font-size: 30px;
+    @include desktop{
+      font-size: 50px;
+    }
   }
 
   &__sale_action {
-    width: 200px;
+    width: 100%;
     padding: 20px 0;
     color: #FFF;
     font-weight: 500;
     font-size: 14px;
     background: #303030;
     @extend .btn;
+    @include desktop {
+      width: 200px;
+    }
   }
 
   &__ing {
-    padding-right: 36px;
-    height: 548px;
+    height: 30vh;
+    @include desktop {
+      padding-right: 36px;
+    }
   }
 
   &__nav_item {
@@ -71,11 +84,17 @@
   }
 
   &__nav_left {
-    left: 24px;
+    left: 8px;
+    @include desktop{
+      left: 24px;
+    }
   }
 
   &__nav_right {
-    right: 24px;
+    right: 8px;
+    @include desktop{
+      right: 24px;
+    }
 
     img {
       rotate: 180deg;

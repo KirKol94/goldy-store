@@ -1,3 +1,5 @@
+@import "../common/mixins";
+
 .header {
   color: #303030;
   font-weight: 400;
@@ -6,27 +8,30 @@
   line-height: 100%;
 
   &__top {
-    display: grid;
-    grid-template-columns: 1fr 1fr 194px 1fr 1fr;
-    margin-top: 10px;
+    display: none;
+    @include desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr 194px 1fr 1fr;
+      margin-top: 24px;
+    }
+
+    :nth-child(3) {
+      justify-content: center;
+    }
+
+    :nth-child(4) {
+      justify-content: end;
+    }
+
+    :nth-child(5) {
+      justify-content: end;
+    }
   }
 
   &__top-item {
     display: flex;
     gap: 7px;
     align-items: center;
-
-    &:nth-child(3) {
-      justify-content: center;
-    }
-
-    &:nth-child(4) {
-      justify-content: end;
-    }
-
-    &:nth-child(5) {
-      justify-content: end;
-    }
   }
 
   &__top_location {
@@ -106,10 +111,13 @@
   }
 
   &__nav {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 23px;
-    background: #F8F8F8;
+    display: none;
+    @include desktop {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 23px;
+      background: #F8F8F8;
+    }
   }
 
   &__nav-list {
@@ -168,6 +176,34 @@
       }
     }
 
+  }
+
+  &__mobile {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include desktop {
+      display: none;
+    }
+
+    &--logo {
+      font-family: 'Prata';
+      font-weight: 400;
+      font-size: 32px;
+
+      :nth-child(1) {
+        color: #E1A561;
+      }
+
+      :nth-child(2) {
+        color: #303030;
+        margin-left: 10px;
+      }
+    }
+    &--burger-icon{
+      cursor: pointer;
+    }
   }
 }
 

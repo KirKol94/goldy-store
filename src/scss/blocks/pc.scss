@@ -1,5 +1,8 @@
 .pc {
-  margin-top: 120px;
+  margin-top: 60px;
+  @include desktop{
+    margin-top: 120px;
+  }
 
   &__content {
   }
@@ -7,17 +10,29 @@
   &__title {
     color: #303030;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 28px;
+    padding: 0 8px;
     font-family: Prata, serif;
-    font-style: normal;
     line-height: 100%;
+    @include desktop{
+      font-size: 40px;
+      padding: 0;
+    }
   }
 
   &__items {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
     margin-top: 40px;
+    @include tablet{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &__item {
@@ -25,9 +40,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 200px;
-    height: 259px;
     background-color: #F8F8F8;
+    gap: 8px;
+    @include desktop{
+      width: 200px;
+      height: 259px;
+      gap: 0;
+    }
 
     &:hover {
       background-color: #fff;
