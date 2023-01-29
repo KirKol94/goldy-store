@@ -14,19 +14,19 @@
   }
 
   &__items {
-    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 40px;
   }
 
   &__item {
-    width: 200px;
-    height: 259px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    width: 200px;
+    height: 259px;
     background-color: #F8F8F8;
 
     &:hover {
@@ -38,13 +38,13 @@
   }
 
   &__name {
+    width: 139px;
     color: #303030;
     font-weight: 400;
-    width: 139px;
-    text-align: center;
     font-size: 16px;
     font-family: Inter, sans-serif;
     font-style: normal;
     line-height: 100%;
+    text-align: center;
   }
 }

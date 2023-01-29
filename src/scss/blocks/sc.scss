@@ -30,7 +30,7 @@
 
   &__item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 224px 1fr;
   }
 
   &__text {
@@ -72,7 +72,7 @@
   &__img{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 }

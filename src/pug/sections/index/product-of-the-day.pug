@@ -1,0 +1,90 @@
+section.product_of_day
+    .product_of_day__content.container
+        .product_of_day__header
+            h2.product_of_day__title Товар дня
+            .product_of_day__arrows
+                img.product_of_day__arrow(src='svg/sprite.svg#arrow-slider-active')
+                img.product_of_day__arrow(src='svg/sprite.svg#arrow-slider-active')
+        .product_of_day__product
+            .swiper.js-product_of_day__slider.product_of_day__slider
+                .swiper-wrapper
+                    .swiper-slide.product_of_day__img
+                        picture
+                            source(srcset=`img/content/potd/1@1x.png 1x, img/content/potd/1@2x.png 2x`)
+                            img(src=`img/content/potd/1@1x.png` srcset=`img/content/potd/1@2x.png` alt='Продукт дня')
+                    .swiper-slide.product_of_day__img
+                        picture
+                            source(srcset=`img/content/potd/1@1x.png 1x, img/content/potd/1@2x.png 2x`)
+                            img(src=`img/content/potd/1@1x.png` srcset=`img/content/potd/1@2x.png` alt='Продукт дня')
+                    .swiper-slide.product_of_day__img
+                        picture
+                            source(srcset=`img/content/potd/1@1x.png 1x, img/content/potd/1@2x.png 2x`)
+                            img(src=`img/content/potd/1@1x.png` srcset=`img/content/potd/1@2x.png` alt='Продукт дня')
+                .js-product_of_day__prev.swiper-button-prev
+                .js-product_of_day__next.swiper-button-next
+            .product_of_day__info
+                .product_of_day__rating
+                    img(src='svg/sprite.svg#star-fill')
+                    img(src='svg/sprite.svg#star-fill')
+                    img(src='svg/sprite.svg#star-fill')
+                    img(src='svg/sprite.svg#star-fill')
+                    img(src='svg/sprite.svg#star')
+                h3.product_of_day__name Кольцо из золота с бриллиантами
+                .product_of_day__article_num Артикул: 1012076
+                .product_of_day__price_block
+                    .product_of_day__price
+                        span.product_of_day__cur_price 22 000₽
+                        span.product_of_day__old_price 22 000₽
+                        span.product_of_day__sale_size -45%
+                    .product_of_day__timer
+                        .product_of_day__timer--item
+                            span 12
+                            span Часов
+                        span.product_of_day__timer--sep :
+                        .product_of_day__timer--item
+                            span 46
+                            span Минут
+                        span.product_of_day__timer--sep :
+                        .product_of_day__timer--item
+                            span 51
+                            span Секунд
+                .product_of_day__colorboard
+                    h4.product_of_day__colorboard--title Цвет
+                    .product_of_day__colorboard--items
+                        .product_of_day__colorboard--item
+                            .product_of_day__colorboard--item_1
+                        .product_of_day__colorboard--item._active
+                            .product_of_day__colorboard--item_2
+                        .product_of_day__colorboard--item
+                            .product_of_day__colorboard--item_3
+                        .product_of_day__colorboard--item
+                            .product_of_day__colorboard--item_4
+                .product_of_day__sizeboard
+                    .product_of_day__sizeboard--title
+                        h4 Размер
+                        span(title='Размер пальца измеряется рулеткой').product_of_day__sizeboard--help ?
+                    .product_of_day__sizeboard--items
+                        .product_of_day__sizeboard--item._active 16,5
+                        .product_of_day__sizeboard--item 17,5
+                        .product_of_day__sizeboard--item 18,5
+                        .product_of_day__sizeboard--item 19
+                        .product_of_day__sizeboard--item 19,5
+                        .product_of_day__sizeboard--item 19,5
+                        .product_of_day__sizeboard--item 18,5
+                        .product_of_day__sizeboard--item 19
+                        .product_of_day__sizeboard--item._disabled 19,5
+                        .product_of_day__sizeboard--item._disabled 19,5
+                .product_of_day__actions
+                    .product_of_day__actions--buy
+                        button В корзину
+                        button Купить в 1 клик
+                    .product_of_day__actions--more
+                        .product_of_day__actions--more_item
+                            img(src='svg/sprite.svg#like-fill')
+                            span Сохранить
+                        .product_of_day__actions--more_item
+                            img(src='svg/sprite.svg#chart-gray')
+                            span Сравнить
+                        .product_of_day__actions--more_item
+                            img(src='svg/sprite.svg#share')
+                            span Поделиться

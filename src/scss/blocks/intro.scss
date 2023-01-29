@@ -30,7 +30,6 @@
     font-weight: 400;
     font-size: 20px;
     font-family: Prata, serif;
-    font-style: normal;
     line-height: 100%;
   }
 
@@ -46,44 +45,28 @@
   }
 
   &__sale_action {
-    max-width: 200px;
-    padding: 20px 56px;
+    width: 200px;
+    padding: 20px 0;
     color: #FFF;
     font-weight: 500;
     font-size: 14px;
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    line-height: 100%;
-    text-align: center;
-    text-transform: uppercase;
     background: #303030;
-    border: none;
-    transition: 300ms;
-
-    &:hover {
-      background: #505050;
-      transition: 300ms;
-    }
-
-    &:active {
-      background: #303030;
-      outline: none;
-      transition: 300ms;
-    }
+    @extend .btn;
   }
 
   &__ing {
     padding-right: 36px;
+    height: 548px;
   }
 
   &__nav_item {
     position: absolute;
-    z-index: 2;
     top: 50%;
-    transform: translateY(-50%);
+    z-index: 2;
     width: 54px;
     border: none;
     outline: none;
+    transform: translateY(-50%);
     cursor: pointer;
   }
 

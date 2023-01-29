@@ -1,0 +1,19 @@
+.btn{
+  font-family: Inter, sans-serif;
+  line-height: 100%;
+  text-transform: uppercase;
+  border: none;
+  transition: 300ms;
+
+  &:hover {
+    background: #505050;
+    transition: 300ms;
+  }
+
+  &:active {
+    background: #000;
+    outline: none;
+    transition: 300ms;
+  }
+
+}
